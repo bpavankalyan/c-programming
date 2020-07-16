@@ -33,7 +33,7 @@ int isAtBorder(int coord, int offset, int size) {
 
 
 
-int max(int size1, int size2) {
+int find_max(int size1, int size2) {
   if (size1 > size2) {
     return size1;
   }
