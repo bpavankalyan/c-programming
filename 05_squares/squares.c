@@ -65,7 +65,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //    ((y is between y_offset and y_offset + size2) AND
       //     x is equal to either x_offset OR x_offset + size2 -1)
       // if so, print a *
-if((isInRange(x,x_offset,size2) && isAtBorder(y,y_offset,size2-1)) || (isInRange(y,y_offset,size2) && isAtBorder(x,x_offset,size2)))
+if((isInRange(x,x_offset,size2) && isAtBorder(y,y_offset,size2-1)) || (isInRange(y,y_offset,size2) && isAtBorder(x,x_offset,size2-1)))
         printf("*");
 								       
 
