@@ -1,20 +1,10 @@
-Grading at Thu Jul 23 11:20:07 UTC 2020
+Grading at Thu Jul 23 11:27:49 UTC 2020
 Attempting to compile  reverse.c
-Your file matched the expected output
-Your output matched what we expected
-Removing your main() and replacing it with our own to run more tests...
-#################################################
-testcase2:
- - Your program segfaulted.
-your code failed the testcase
-#################################################
-testcase3:
-Your file matched the expected output
-#################################################
-testcase4:
-Your file matched the expected output
-#################################################
-testcase5:
-Your file matched the expected output
+reverse.c: In function ‘reverse’:
+reverse.c:7:6: error: ‘s’ undeclared (first use in this function)
+   if(s==NULL)
+      ^
+reverse.c:7:6: note: each undeclared identifier is reported only once for each function it appears in
+The code did not compile!
 
-Overall Grade: C
+Overall Grade: F
