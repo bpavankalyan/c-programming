@@ -4,7 +4,10 @@
 
 void reverse(char * str) {
   //WRITE ME!
+
   int n =strlen(str);
+  if(n==0)
+    return ;
   for(int i=0;i<n/2;i++)
     {
       char a=str[i];
