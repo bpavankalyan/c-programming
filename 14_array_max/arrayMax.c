@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int * arrayMax(int * array, int n) {
-  if(n<0)
+  if(n<=0)
     return NULL;
   int *p =array;
   for(int i=1;i<n;i++)
