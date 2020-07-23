@@ -9,7 +9,7 @@ size_t maxSeq(int * arr, size_t n)
   int max=1,current=1;
   for(int i=1;i<n;i++)
     {
-      if(arr[i-1]>arr[i])
+      if(arr[i-1]<arr[i])
 	 current++;
 	 else
 	   current=1;
