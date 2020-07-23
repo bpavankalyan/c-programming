@@ -1,7 +1,8 @@
-Grading at Thu Jul 23 07:07:46 UTC 2020
+Grading at Thu Jul 23 07:13:17 UTC 2020
 Attempting to compile test.c
-The code did not compile
+gcc -o test -std=gnu99 -Wall -Werror -pedantic test.c
+compiled
 Your file matched the expected output
 Your output matched what we expected
 
-Overall Grade: F
+Overall Grade: A
