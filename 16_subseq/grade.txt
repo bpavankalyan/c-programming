@@ -1,8 +1,14 @@
-Grading at Thu Jul 23 06:48:48 UTC 2020
+Grading at Thu Jul 23 06:56:03 UTC 2020
 Attempting to compile maxSeq.c 
-gcc: error: maxSeq.c: No such file or directory
-gcc: fatal error: no input files
-compilation terminated.
+maxSeq.c: In function ‘maxseq’:
+maxSeq.c:7:3: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   if (n=0)
+   ^
+maxSeq.c:16:10: error: ‘cuurent’ undeclared (first use in this function)
+   if(max<cuurent)
+          ^
+maxSeq.c:16:10: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
 The code did not compile!
 
 Overall Grade: F
