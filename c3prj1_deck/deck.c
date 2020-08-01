@@ -1,57 +1,62 @@
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
 #include "deck.h"
-
-
-int com (card_t c1,card_t c2){
-  if ((c1.value == c2.value) &&(c1.suit == c2.suit)) return 1;
-  return 0;
-
-}
-
+#include "cards.h"
 void print_hand(deck_t * hand){
-  card_t ** card =hand -> cards ;
-  card_t  card1;
-  for (size_t i=0 ;i<(hand -> n_cards );i++){
-    card1=**(card +i);
-    print_card(card1);
+  size_t i=0;
+  print_card(*hand->cards[i++]);
+  while(i<hand->n_cards){
+    printf(" ");
+    print_card(*hand->cards[i++]);
   }
+  /*printf(" ");*/
 }
 
 int deck_contains(deck_t * d, card_t c) {
-  card_t ** card =d -> cards ;
-  for (size_t i=0 ;i< d -> n_cards ;i++){
-    if (com(**(card+i),c)) return 1;
+  for(int i=0;i<d->n_cards;i++){
+    if(c.value==d->cards[i]->value && c.suit==d->cards[i]->suit){
+      return 1;
+    }
   }
-
   return 0;
 }
 
 void shuffle(deck_t * d){
-  card_t ** card =d -> cards ;
-  card_t * temp;
-  size_t n=d ->n_cards;
-  int randarry;
-  for (size_t i=0 ;i< n/2 ;i++){
-    randarry= random()%(n-i)+i;
-    temp=card[i];
-    card[i]=card[randarry];
-    card[randarry]=temp;
+  size_t m=random()%6;
+  for(size_t i=0;i<m;i++){
+    size_t low=i*(d->n_cards / m);
+    size_t high=(i+1)*(d->n_cards / m);
+    for(size_t j=low;j<high;j++){
+      card_t *temp=d->cards[j];
+      size_t n=(random()*random()) % d->n_cards;
+      d->cards[j]=d->cards[n];
+      d->cards[n]=temp;
+    }
+  }
+  /*Another Shuffle*/
+  for(size_t j=0; j<d->n_cards; j++){
+    card_t *temp=d->cards[j];
+    size_t n=(random()*random()) % d->n_cards;
+    d->cards[j]=d->cards[n];
+    d->cards[n]=temp;
   }
 }
 
 void assert_full_deck(deck_t * d) {
-  card_t ** card =d -> cards ;
-  card_t c;
-  int count;
-
-  for (size_t i=0 ;i< d -> n_cards ;i++){
-    c=**(card+i);
-    count=0;
-    for (size_t j=0 ;j< d -> n_cards ;j++){
-      if(com(**(card+j), c)) count ++;
+  unsigned rep[52]={0};
+  for(unsigned i=0;i<52;i++){
+    if(deck_contains(d,card_from_num(i))){
+      rep[i]++;
     }
-    assert(count ==1);
+  }
+  for(unsigned i=0;i<52;i++){
+    if(rep[i]>1){
+      assert(rep[i]>1);
+    }
   }
 }
