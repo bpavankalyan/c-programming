@@ -26,15 +26,18 @@ suit_t flush_suit(deck_t * hand) {
 unsigned get_largest_element(unsigned * arr, size_t n) {
   int lar=arr[0];
   for(size_t i=1;i<n;i++)
-    if(lar<arr[1])
+    if(lar<arr[i])
       lar=arr[i];
   return lar;
 }
 
 size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
 
-  for(size_t i=0;i<n;i++)
-    if(match_counts[i]==n_of_akind) return i;
+  
+  for (size_t i=0;i<n;i++){
+    if (match_counts[i] == n_of_akind) return i;
+  }
+  
   return 0;
 }
 ssize_t  find_secondary_pair(deck_t * hand,
