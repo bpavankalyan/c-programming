@@ -48,11 +48,11 @@ suit_t flush_suit(deck_t * hand) {
 }
 
 unsigned get_largest_element(unsigned * arr, size_t n) {
- unsigned lar=arr[0];
+ unsigned largest=arr[0];
   for(size_t i=1;i<n;i++)
-    if(lar<arr[i])
-      lar=arr[i];
-  return lar;
+    if(largest<arr[i])
+      largest=arr[i];
+  return largest;
 }
 
 size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
