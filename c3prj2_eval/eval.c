@@ -194,7 +194,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
   return ans;
 }
 
-hand_eval_t evaluate_hand(deck_t * hand) ;
+//hand_eval_t evaluate_hand(deck_t * hand) ;
 
 int compare_hands(deck_t * hand1, deck_t * hand2) {
   qsort(hand1->cards,hand1->n_cards,sizeof(hand1->cards[0]),card_ptr_comp);
