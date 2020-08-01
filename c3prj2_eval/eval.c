@@ -1,8 +1,7 @@
-#include "eval.h"
+#include"eval.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-
 int com1(card_t c1,card_t c2){
   if (c1.value == c2.value) return 1;
   return 0;
@@ -48,22 +47,22 @@ suit_t flush_suit(deck_t * hand) {
 }
 
 unsigned get_largest_element(unsigned * arr, size_t n) {
- unsigned largest=arr[0];
-  for(size_t i=1;i<n;i++)
-    if(largest<arr[i])
-      largest=arr[i];
+  unsigned largest= arr[0];
+  for (size_t i=1 ; i<n ;i++ ){
+    if (arr[i] > largest) largest=arr[i];
+  }
   return largest;
 }
 
 size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
 
-  
   for (size_t i=0;i<n;i++){
     if (match_counts[i] == n_of_akind) return i;
   }
-  
+
   return 0;
 }
+
 ssize_t  find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
@@ -78,7 +77,6 @@ ssize_t  find_secondary_pair(deck_t * hand,
 
   return -1;
 }
-
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
   int count =1;
   if (fs ==NUM_SUITS ){
@@ -122,12 +120,11 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   return is_n_length_straight_at(hand, index, fs, 5);
 }
 
-
-
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
 				  size_t idx) {
+
 
   hand_eval_t ans;
   card_t**card = hand -> cards;
@@ -151,7 +148,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 	if (count >= 5) break;}
     }
   }
-      
+
   return ans;
 }
 
@@ -173,8 +170,6 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
       else continue;
     }
   }
-
-
   return 0;
 }
 
@@ -185,8 +180,8 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 //implementation in eval-c4.o) so that the
 //other functions we have provided can make
 //use of get_match_counts.
-unsigned * get_match_counts(deck_t * hand) ;
 
+unsigned * get_match_counts(deck_t * hand) ;
 // We provide the below functions.  You do NOT need to modify them
 // In fact, you should not modify them!
 
@@ -196,10 +191,12 @@ unsigned * get_match_counts(deck_t * hand) ;
 //into the card array "to"
 //if "fs" is NUM_SUITS, then suits are ignored.
 //if "fs" is any other value, a straight flush (of that suit) is copied.
-void copy_straight(card_t ** to, deck_t *from, size_t ind, suit_t fs, size_t count) {
+void copy_straight(card_t ** to, deck_t *from, size_t ind, suit_t fs, size_t count){
+
   assert(fs == NUM_SUITS || from->cards[ind]->suit == fs);
   unsigned nextv = from->cards[ind]->value;
   size_t to_ind = 0;
+  //  printf("%d %zu \n",fs,ind);
   while (count > 0) {
     assert(ind < from->n_cards);
     assert(nextv >= 2);
