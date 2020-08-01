@@ -59,6 +59,6 @@ void assert_full_deck(deck_t * d) {
       for(size_t j=i+1;j<n;j++)
 	if(compare(**(card+i),**(card+j)))
 	   c++;
-	   assert(c==1);
+	   assert(c==0);
     }
 }
