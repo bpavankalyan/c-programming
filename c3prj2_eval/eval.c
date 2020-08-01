@@ -67,7 +67,7 @@ ssize_t  find_secondary_pair(deck_t * hand,
   return -1;
 }
 
-/*int is_n_straight_at(deck_t * hand, size_t index, suit_t fs, unsigned n){
+int is_n_straight_at(deck_t * hand, size_t index, suit_t fs, unsigned n){
   card_t *const *const cards=hand->cards;
   if(fs!=NUM_SUITS && fs!=cards[index]->suit) {
     return 0;
@@ -119,8 +119,10 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
     }
   }
   return 0;
-  }*/
+  }
 
+
+/*
 int is_n_straight_at(deck_t * hand, size_t index, suit_t fs, unsigned n){
   size_t i=index;
   if((fs!=NUM_SUITS && fs!=hand->cards[i]->suit) || n>hand->n_cards-i){
@@ -128,7 +130,7 @@ int is_n_straight_at(deck_t * hand, size_t index, suit_t fs, unsigned n){
   }
   size_t count=0;
   unsigned next_value=hand->cards[i]->value;
-  /*suit_t next_suit=hand->cards[i]->suit;*/
+  //suit_t next_suit=hand->cards[i]->suit;
   while(count<n){
     if(hand->cards[i]->value==next_value && (fs==NUM_SUITS || hand->cards[i]->suit==fs)){
       count++;
@@ -166,7 +168,7 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   }
   return ans;
 }
-
+*/
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
