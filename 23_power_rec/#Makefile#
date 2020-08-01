@@ -1,0 +1,2 @@
+power:test-power.c
+	gcc -std=c99 -o power test-power.c power.c 
