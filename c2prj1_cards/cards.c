@@ -195,7 +195,6 @@ card_t card_from_num(unsigned c) {
 
 }
 
-/*
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
