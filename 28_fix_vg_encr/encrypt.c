@@ -46,6 +46,11 @@ int main(int argc, char ** argv) {
   strcpy(outFileName, argv[2]);
   strcat(outFileName, ".enc");
   FILE * outFile = fopen(outFileName, "w");
+  free(outFileName);/*added to free outFileName*/
+  if(outFile==NULL){/*added to check outFile opening*/
+    perror("Could not open outFile");
+    return EXIT_FAILURE;
+  }/*addition ends here*/
   encrypt(f,key, outFile);
   if (fclose(outFile) != 0) {
     perror("Failed to close the input file!");
