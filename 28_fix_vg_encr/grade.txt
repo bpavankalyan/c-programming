@@ -1,22 +1,148 @@
-Grading at Sat Aug  8 09:44:05 UTC 2020
+Grading at Sat Aug  8 09:46:18 UTC 2020
 Attempting to compile encrypt.c
 testcase1:
-valgrind reported memory errors
+your output was correct
+  - Valgrind reported errors
+valgrind was not clean
+==609== Memcheck, a memory error detector
+==609== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==609== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==609== 
+==609== Parent PID: 608
+==609== 
+==609== 
+==609== HEAP SUMMARY:
+==609==     in use at exit: 29 bytes in 1 blocks
+==609==   total heap usage: 6 allocs, 5 frees, 9,445 bytes allocated
+==609== 
+==609== 29 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==609==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==609==    by 0x400BA5: main (in /graderhome/work/28_fix_vg_encr/encrypt)
+==609== 
+==609== LEAK SUMMARY:
+==609==    definitely lost: 29 bytes in 1 blocks
+==609==    indirectly lost: 0 bytes in 0 blocks
+==609==      possibly lost: 0 bytes in 0 blocks
+==609==    still reachable: 0 bytes in 0 blocks
+==609==         suppressed: 0 bytes in 0 blocks
+==609== 
+==609== For counts of detected and suppressed errors, rerun with: -v
+==609== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase2:
   - Valgrind was clean (no errors, no memory leaks)
 valgrind was clean
 #################################################
 testcase3:
-valgrind reported memory errors
+  - Valgrind reported errors
+valgrind was not clean
+==626== Memcheck, a memory error detector
+==626== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==626== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==626== 
+==626== Parent PID: 625
+==626== 
+==626== 
+==626== HEAP SUMMARY:
+==626==     in use at exit: 29 bytes in 1 blocks
+==626==   total heap usage: 6 allocs, 5 frees, 9,445 bytes allocated
+==626== 
+==626== 29 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==626==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==626==    by 0x400BA5: main (in /graderhome/work/28_fix_vg_encr/encrypt)
+==626== 
+==626== LEAK SUMMARY:
+==626==    definitely lost: 29 bytes in 1 blocks
+==626==    indirectly lost: 0 bytes in 0 blocks
+==626==      possibly lost: 0 bytes in 0 blocks
+==626==    still reachable: 0 bytes in 0 blocks
+==626==         suppressed: 0 bytes in 0 blocks
+==626== 
+==626== For counts of detected and suppressed errors, rerun with: -v
+==626== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase4:
-valgrind reported memory errors
+  - Valgrind reported errors
+valgrind was not clean
+==635== Memcheck, a memory error detector
+==635== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==635== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==635== 
+==635== Parent PID: 634
+==635== 
+==635== 
+==635== HEAP SUMMARY:
+==635==     in use at exit: 29 bytes in 1 blocks
+==635==   total heap usage: 6 allocs, 5 frees, 9,445 bytes allocated
+==635== 
+==635== 29 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==635==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==635==    by 0x400BA5: main (in /graderhome/work/28_fix_vg_encr/encrypt)
+==635== 
+==635== LEAK SUMMARY:
+==635==    definitely lost: 29 bytes in 1 blocks
+==635==    indirectly lost: 0 bytes in 0 blocks
+==635==      possibly lost: 0 bytes in 0 blocks
+==635==    still reachable: 0 bytes in 0 blocks
+==635==         suppressed: 0 bytes in 0 blocks
+==635== 
+==635== For counts of detected and suppressed errors, rerun with: -v
+==635== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase5:
-valgrind reported memory errors
+  - Valgrind reported errors
+valgrind was not clean
+==644== Memcheck, a memory error detector
+==644== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==644== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==644== 
+==644== Parent PID: 643
+==644== 
+==644== 
+==644== HEAP SUMMARY:
+==644==     in use at exit: 29 bytes in 1 blocks
+==644==   total heap usage: 6 allocs, 5 frees, 9,445 bytes allocated
+==644== 
+==644== 29 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==644==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==644==    by 0x400BA5: main (in /graderhome/work/28_fix_vg_encr/encrypt)
+==644== 
+==644== LEAK SUMMARY:
+==644==    definitely lost: 29 bytes in 1 blocks
+==644==    indirectly lost: 0 bytes in 0 blocks
+==644==      possibly lost: 0 bytes in 0 blocks
+==644==    still reachable: 0 bytes in 0 blocks
+==644==         suppressed: 0 bytes in 0 blocks
+==644== 
+==644== For counts of detected and suppressed errors, rerun with: -v
+==644== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 #################################################
 testcase6:
-valgrind reported memory errors
+  - Valgrind reported errors
+valgrind was not clean
+==653== Memcheck, a memory error detector
+==653== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==653== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==653== 
+==653== Parent PID: 652
+==653== 
+==653== 
+==653== HEAP SUMMARY:
+==653==     in use at exit: 29 bytes in 1 blocks
+==653==   total heap usage: 6 allocs, 5 frees, 9,445 bytes allocated
+==653== 
+==653== 29 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==653==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==653==    by 0x400BA5: main (in /graderhome/work/28_fix_vg_encr/encrypt)
+==653== 
+==653== LEAK SUMMARY:
+==653==    definitely lost: 29 bytes in 1 blocks
+==653==    indirectly lost: 0 bytes in 0 blocks
+==653==      possibly lost: 0 bytes in 0 blocks
+==653==    still reachable: 0 bytes in 0 blocks
+==653==         suppressed: 0 bytes in 0 blocks
+==653== 
+==653== For counts of detected and suppressed errors, rerun with: -v
+==653== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 
 Overall Grade: F
