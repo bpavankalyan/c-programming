@@ -1,3 +1,4 @@
+8_tests.txt
 7_tests.txt
 0_tests.txt
 1_tests.txt
