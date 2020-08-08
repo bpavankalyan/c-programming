@@ -21,7 +21,9 @@ void encrypt(FILE * f, int key, FILE * outfile){
       ptr++;
     }
     fprintf(outfile, "%s", line);
+     
   }
+  free(line);
 }
 
 int main(int argc, char ** argv) {
