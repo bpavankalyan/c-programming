@@ -22,7 +22,7 @@ void free_future_cards(future_cards_t *fc){
     free(fc->decks[i].cards);
   }
   free(fc->decks);
-  /*free(fc)*/;
+  free(fc);
 }
 
 size_t *create_wins_or_ties(size_t n){
