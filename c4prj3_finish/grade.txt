@@ -1,4 +1,4 @@
-Grading at Sat Aug 15 04:58:03 UTC 2020
+Grading at Sat Aug 15 05:02:29 UTC 2020
 Running 'make clean' to do a clean build of your project
 rm -rf *.o poker *~
 Running 'make poker OTHERFLAGS=-O3' to build your project
@@ -16,28 +16,10 @@ Could not find the win percent in your output
 You dont seem to have the right total draws.
 Yours sum to 0 but I expected 20000
 Running a simulation with 25000 draws for 3 hands...
-Valgrind reported errors:
-==840== Memcheck, a memory error detector
-==840== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==840== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==840== Command: ./poker inp.txt 25000
-==840== Parent PID: 839
-==840== 
-==840== Invalid free() / delete / delete[] / realloc()
-==840==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==840==    by 0x400B6E: main (main.c:115)
-==840==  Address 0xfff000a50 is on thread 1's stack
-==840==  in frame #1, created by main (main.c:79)
-==840== 
-==840== 
-==840== HEAP SUMMARY:
-==840==     in use at exit: 0 bytes in 0 blocks
-==840==   total heap usage: 175,211 allocs, 175,212 frees, 5,021,318 bytes allocated
-==840== 
-==840== All heap blocks were freed -- no leaks are possible
-==840== 
-==840== For counts of detected and suppressed errors, rerun with: -v
-==840== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+ ** Hand 0 differed from our answer by -20.42%
+ ** Hand 1 differed from our answer by 65.35%
+ ** Hand 2 differed from our answer by -44.84%
+*** Test case failed ***
 Running a simulation with 25000 draws for 3 hands...
 Could not find the win percent in your output
 Could not find the win percent in your output
@@ -50,28 +32,11 @@ Could not find the win percent in your output
 You dont seem to have the right total draws.
 Yours sum to 0 but I expected 25000
 Running a simulation with 80000 draws for 4 hands...
-Valgrind reported errors:
-==938== Memcheck, a memory error detector
-==938== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==938== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==938== Command: ./poker inp3.txt 80000
-==938== Parent PID: 937
-==938== 
-==938== Invalid free() / delete / delete[] / realloc()
-==938==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==938==    by 0x400B6E: main (main.c:115)
-==938==  Address 0xfff000a50 is on thread 1's stack
-==938==  in frame #1, created by main (main.c:79)
-==938== 
-==938== 
-==938== HEAP SUMMARY:
-==938==     in use at exit: 0 bytes in 0 blocks
-==938==   total heap usage: 1,040,231 allocs, 1,040,232 frees, 30,101,592 bytes allocated
-==938== 
-==938== All heap blocks were freed -- no leaks are possible
-==938== 
-==938== For counts of detected and suppressed errors, rerun with: -v
-==938== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+ ** Hand 0 differed from our answer by -18.89%
+ ** Hand 1 differed from our answer by 6.42%
+ ** Hand 2 differed from our answer by 10.94%
+ ** Hand 3 differed from our answer by 1.53%
+*** Test case failed ***
 Running a simulation with 30000 draws for 2 hands...
 Could not find the win percent in your output
 Could not find the win percent in your output
