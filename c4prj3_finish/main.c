@@ -1,6 +1,4 @@
 
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -25,7 +23,7 @@ void free_future_cards(future_cards_t *fc){
     free(fc->decks[i].cards);
   }
   free(fc->decks);
-  /*free(fc)*/;
+  free(fc);
 }
 
 size_t *create_wins_or_ties(size_t n){
@@ -126,6 +124,17 @@ int main(int argc, char ** argv) {
 
   return EXIT_SUCCESS;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
